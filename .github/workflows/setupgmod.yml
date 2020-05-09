@@ -18,4 +18,4 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     - name: Run server
-      run: docker run -p 27015:27015/tcp -p 27015:27015/udp -e "AUTHKEY=5EA0376B4D9F011724E955F7116876D2" -e "GAMEMODE=terrortown" -e "MAP=ttt_minecraft_b5" -e "WORKSHOPCOLLECTIONID=843519054" -v ./server.cfg:/opt/steam/garrysmod/cfg/server.cfg hackebein/garrysmod
+      run: docker run -p 27015:27015/tcp -p 27015:27015/udp -e "AUTHKEY=5EA0376B4D9F011724E955F7116876D2" -e "GAMEMODE=terrortown" -e "MAP=ttt_minecraft_b5" -e "WORKSHOPCOLLECTIONID=843519054" -v ./mount.cfg:/opt/steam/garrysmod/cfg/mount.cfg hackebein/garrysmod
