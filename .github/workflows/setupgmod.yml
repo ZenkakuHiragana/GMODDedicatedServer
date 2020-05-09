@@ -18,7 +18,7 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     - name: Run server
-      run: docker run -it \
+      run: docker run \
         -p 27015:27015/tcp \
         -p 27015:27015/udp \
         -e "AUTHKEY=5EA0376B4D9F011724E955F7116876D2" \
