@@ -13,9 +13,9 @@ jobs:
         docker run -it
         -p 27015:27015/tcp
         -p 27015:27015/udp
-        -e "AUTHKEY="
-        -e "GLST="
+        -e "AUTHKEY=${{ secrets.STEAM_WEB_API_KEY }}"
+        -e "GLST=${{ secrets.GAME_SERVER_LOGIN_TOKEN }}"
         -e "GAMEMODE=sandbox"
         -e "MAP=gm_construct"
-        -e "WORKSHOPCOLLECTIONID="
+        -e "WORKSHOPCOLLECTIONID=${{ secrets.WORKSHOP_COLLECTION_ID }}"
         hackebein/garrysmod
