@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run server
       run: >
-        docker run
+        docker run -t
         -p 27015:27015/tcp
         -p 27015:27015/udp
         -e "AUTHKEY=${{ secrets.STEAM_WEB_API_KEY }}"
